@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   
+    overflow: hidden;
+    
+}
+.main{
+    /* background-color:aqua; */
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/mountain.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+
+    
+}
+button{
+    position:absolute;
+    height: 6%;
+    width: 8%;
+    font-size: 22px;
+    font-family: cursive;
+    font-weight: 500;
+    background-color: rgba(19, 232, 54, 0.53);
+    border-radius: 10px;
+    top: 25px;
+    left: 45px;
+
+}
+button:hover{
+    cursor: pointer;
+}
+.man{
+    background-image: url(images/runman.gif);
+    width: 270px;
+    height: 244px;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    background-size: cover;
+    left: 52px;
+}
+
+.dog{
+    background-image: url(images/dog.gif);
+    width: 166px;
+    height: 113px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left : 200px;
+}
+
+.scoreC{
+    font-size: 22px;
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 25px;
+    border: 2px solid black;
+    padding: 5px;
+    font-family: cursive;
+    border-radius: 10px;
+    background-color: rgba(173, 216, 230, 0.705);
+}
+
+.start{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    font-family: cursive;
+    font-weight: 700;
+    color: red;
+}
+
+
+.animateMan{
+    animation: man 0.8s linear;
+
+}
+
+.dogAni{
+    animation: dog 4.5s linear infinite;
+}
+
+@keyframes man {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 250px;
+    }
+    100%{
+        bottom: 0;
+        
+    }
+}
+
+
+@keyframes dog {
+    0%{
+        left: 100vw;
+   
+    }
+    100%{
+        
+        left: -10vw;
+    }
+    
+}

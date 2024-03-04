@@ -9,7 +9,7 @@ setTimeout(() => {
     audio.play();
 audio.autoplay = true;
 audio.load();
-}, 1000);
+}, 5000);
 
 
 document.onkeydown = function(e){

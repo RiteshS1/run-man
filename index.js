@@ -90,3 +90,27 @@ document.querySelector('.info').addEventListener('click',()=>{
     document.querySelector('.info').style.width= '19%';
     document.querySelector('.info').style.left= '20px';
 })
+let startX, startY, endX, endY;
+
+document.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+});
+
+document.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+    endY = e.touches[0].clientY;
+});
+
+document.addEventListener('touchend', () => {
+    let diffX = endX - startX;
+    let diffY = endY - startY;
+
+    if (Math.abs(diffY) > Math.abs(diffX) && diffY < 0) { // Upward swipe
+        let man = document.querySelector('.man');
+        man.classList.add('animateMan');
+        setTimeout(() => {
+            man.classList.remove('animateMan');
+        }, 700);
+    }
+});
